@@ -5,10 +5,9 @@
 //  Created by Ricky on 2019/11/2.
 //
 
-#import <PreferencePanes/PreferencePanes.h>
+#import <Foundation/Foundation.h>
 
-@interface QLPDFAsset : NSPreferencePane
-
-- (void)mainViewDidLoad;
+@interface QLPDFAsset : NSObject
 
 @end
+

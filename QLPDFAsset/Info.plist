@@ -4,6 +4,21 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>QLGenerator</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.adobe.pdf</string>
+			</array>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>applicatoin/pdf</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -18,13 +33,45 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>NSMainNibFile</key>
-	<string>QLPDFAsset</string>
-	<key>NSPrefPaneIconFile</key>
-	<string>QLPDFAsset.tiff</string>
-	<key>NSPrefPaneIconLabel</key>
-	<string>QLPDFAsset</string>
-	<key>NSPrincipalClass</key>
-	<string>QLPDFAsset</string>
+	<key>CFPlugInDynamicRegisterFunction</key>
+	<string></string>
+	<key>CFPlugInDynamicRegistration</key>
+	<string>NO</string>
+	<key>CFPlugInFactories</key>
+	<dict>
+		<key>93e14fd0-2cfa-49f8-9b44-5178c9e56ef2</key>
+		<string>QuickLookGeneratorPluginFactory</string>
+	</dict>
+	<key>CFPlugInTypes</key>
+	<dict>
+		<key>5E2D9680-5022-40FA-B806-43349622E5B9</key>
+		<array>
+			<string>93e14fd0-2cfa-49f8-9b44-5178c9e56ef2</string>
+		</array>
+	</dict>
+	<key>CFPlugInUnloadFunction</key>
+	<string></string>
+	<key>QLNeedsToBeRunInMainThread</key>
+	<false/>
+	<key>QLPreviewHeight</key>
+	<integer>640</integer>
+	<key>QLPreviewWidth</key>
+	<integer>640</integer>
+	<key>QLSupportsConcurrentRequests</key>
+	<true/>
+	<key>QLThumbnailMinimumSize</key>
+	<real>8</real>
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeIdentifier</key>
+			<string>com.adobe.pdf</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.mine-type</key>
+				<string>application/pdf</string>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>

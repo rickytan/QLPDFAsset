@@ -7,10 +7,8 @@
 
 #import "QLPDFAsset.h"
 
+
 @implementation QLPDFAsset
 
-- (void)mainViewDidLoad
-{
-}
 
 @end

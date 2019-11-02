@@ -9,17 +9,28 @@
 /* Begin PBXBuildFile section */
 		9C18C088236D60660079E068 /* QLPDFAsset.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C18C087236D60660079E068 /* QLPDFAsset.h */; };
 		9C18C08A236D60660079E068 /* QLPDFAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C18C089236D60660079E068 /* QLPDFAsset.m */; };
-		9C18C08C236D60660079E068 /* QLPDFAsset.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 9C18C08B236D60660079E068 /* QLPDFAsset.tiff */; };
-		9C18C08F236D60660079E068 /* QLPDFAsset.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C18C08D236D60660079E068 /* QLPDFAsset.xib */; };
+		9C18C097236D60F70079E068 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C18C096236D60F70079E068 /* main.m */; };
+		9C18C09E236D62030079E068 /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C18C09D236D62030079E068 /* GeneratePreviewForURL.m */; };
+		9C18C0A0236D620E0079E068 /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C18C09F236D620E0079E068 /* GenerateThumbnailForURL.m */; };
+		9C18C0A2236D67650079E068 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C18C0A1236D67650079E068 /* CoreFoundation.framework */; };
+		9C18C0A8236D67760079E068 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C18C0A7236D67760079E068 /* CoreServices.framework */; };
+		9C18C0E0236D86700079E068 /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C18C0DE236D866F0079E068 /* tile.png */; };
+		9C18C0E1236D86700079E068 /* tile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C18C0DF236D866F0079E068 /* tile@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9C18C084236D60660079E068 /* QLPDFAsset.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QLPDFAsset.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C18C084236D60660079E068 /* QLPDFAsset.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QLPDFAsset.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C18C087236D60660079E068 /* QLPDFAsset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QLPDFAsset.h; sourceTree = "<group>"; };
 		9C18C089236D60660079E068 /* QLPDFAsset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLPDFAsset.m; sourceTree = "<group>"; };
-		9C18C08B236D60660079E068 /* QLPDFAsset.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = QLPDFAsset.tiff; sourceTree = "<group>"; };
-		9C18C08E236D60660079E068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/QLPDFAsset.xib; sourceTree = "<group>"; };
 		9C18C090236D60660079E068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C18C096236D60F70079E068 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C18C09D236D62030079E068 /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
+		9C18C09F236D620E0079E068 /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
+		9C18C0A1236D67650079E068 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		9C18C0A7236D67760079E068 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		9C18C0C8236D746F0079E068 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		9C18C0DE236D866F0079E068 /* tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile.png; sourceTree = "<group>"; };
+		9C18C0DF236D866F0079E068 /* tile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tile@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C18C0A8236D67760079E068 /* CoreServices.framework in Frameworks */,
+				9C18C0A2236D67650079E068 /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,13 +51,14 @@
 			children = (
 				9C18C086236D60660079E068 /* QLPDFAsset */,
 				9C18C085236D60660079E068 /* Products */,
+				9C18C098236D619C0079E068 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		9C18C085236D60660079E068 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C18C084236D60660079E068 /* QLPDFAsset.prefPane */,
+				9C18C084236D60660079E068 /* QLPDFAsset.qlgenerator */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,13 +66,26 @@
 		9C18C086236D60660079E068 /* QLPDFAsset */ = {
 			isa = PBXGroup;
 			children = (
+				9C18C0DE236D866F0079E068 /* tile.png */,
+				9C18C0DF236D866F0079E068 /* tile@2x.png */,
+				9C18C09D236D62030079E068 /* GeneratePreviewForURL.m */,
+				9C18C09F236D620E0079E068 /* GenerateThumbnailForURL.m */,
+				9C18C090236D60660079E068 /* Info.plist */,
+				9C18C096236D60F70079E068 /* main.m */,
 				9C18C087236D60660079E068 /* QLPDFAsset.h */,
 				9C18C089236D60660079E068 /* QLPDFAsset.m */,
-				9C18C08B236D60660079E068 /* QLPDFAsset.tiff */,
-				9C18C08D236D60660079E068 /* QLPDFAsset.xib */,
-				9C18C090236D60660079E068 /* Info.plist */,
 			);
 			path = QLPDFAsset;
+			sourceTree = "<group>";
+		};
+		9C18C098236D619C0079E068 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C18C0A7236D67760079E068 /* CoreServices.framework */,
+				9C18C0A1236D67650079E068 /* CoreFoundation.framework */,
+				9C18C0C8236D746F0079E068 /* Quartz.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,7 +117,7 @@
 			);
 			name = QLPDFAsset;
 			productName = QLPDFAsset;
-			productReference = 9C18C084236D60660079E068 /* QLPDFAsset.prefPane */;
+			productReference = 9C18C084236D60660079E068 /* QLPDFAsset.qlgenerator */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -129,8 +156,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C18C08F236D60660079E068 /* QLPDFAsset.xib in Resources */,
-				9C18C08C236D60660079E068 /* QLPDFAsset.tiff in Resources */,
+				9C18C0E1236D86700079E068 /* tile@2x.png in Resources */,
+				9C18C0E0236D86700079E068 /* tile.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,22 +168,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C18C097236D60F70079E068 /* main.m in Sources */,
+				9C18C0A0236D620E0079E068 /* GenerateThumbnailForURL.m in Sources */,
 				9C18C08A236D60660079E068 /* QLPDFAsset.m in Sources */,
+				9C18C09E236D62030079E068 /* GeneratePreviewForURL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		9C18C08D236D60660079E068 /* QLPDFAsset.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C18C08E236D60660079E068 /* Base */,
-			);
-			name = QLPDFAsset.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9C18C091236D60660079E068 /* Debug */ = {
@@ -209,7 +228,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -261,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -275,10 +294,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 36X754M3QH;
 				INFOPLIST_FILE = QLPDFAsset/Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				INSTALL_PATH = "~/Library/QuickLook";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.rickytan.QLPDFAsset;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = prefPane;
+				WRAPPER_EXTENSION = qlgenerator;
 			};
 			name = Debug;
 		};
@@ -289,10 +308,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 36X754M3QH;
 				INFOPLIST_FILE = QLPDFAsset/Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				INSTALL_PATH = "~/Library/QuickLook";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.rickytan.QLPDFAsset;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = prefPane;
+				WRAPPER_EXTENSION = qlgenerator;
 			};
 			name = Release;
 		};
