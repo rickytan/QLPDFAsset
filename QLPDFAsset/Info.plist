@@ -58,7 +58,7 @@
 	<key>QLPreviewWidth</key>
 	<integer>640</integer>
 	<key>QLSupportsConcurrentRequests</key>
-	<false/>
+	<true/>
 	<key>QLThumbnailMinimumSize</key>
 	<integer>17</integer>
 	<key>UTImportedTypeDeclarations</key>

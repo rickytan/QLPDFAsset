@@ -62,6 +62,32 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
     
     CGContextRef context = QLPreviewRequestCreateContext(preview, thumbSize, YES, props);
     if (context) {
+        /*
+        static dispatch_once_t onceToken;
+        static CGImageRef tileImageRef = nil;
+        dispatch_once(&onceToken, ^{
+            CGColorSpaceRef space = CGColorSpaceCreateDeviceRGB();
+            CGContextRef bitmapRef = CGBitmapContextCreate(NULL, 32, 32, 8, 4 * 32, space, kCGImageAlphaPremultipliedLast);
+            CGColorSpaceRelease(space);
+            {
+                CGFloat color[4] = {1, 1, 1, 1};
+                CGContextSetFillColor(bitmapRef, color);
+                CGContextFillRect(bitmapRef, CGRectMake(0, 0, 16, 16));
+                CGContextFillRect(bitmapRef, CGRectMake(16, 16, 16, 16));
+            }
+            {
+                CGFloat color[4] = {0.8, 0.8, 0.8, 1};
+                CGContextSetFillColor(bitmapRef, color);
+                CGContextFillRect(bitmapRef, CGRectMake(16, 0, 16, 16));
+                CGContextFillRect(bitmapRef, CGRectMake(0, 16, 16, 16));
+            }
+            tileImageRef = CGBitmapContextCreateImage(bitmapRef);
+            
+            CGContextRelease(bitmapRef);
+        });
+        
+        CGContextDrawTiledImage(context, CGRectMake(0, 0, CGImageGetWidth(tileImageRef), CGImageGetHeight(tileImageRef)), tileImageRef);
+         */
         
         const NSInteger rotationAngle = CGPDFPageGetRotationAngle(pdfPageRef);
         const CGFloat angleInRadians = -rotationAngle * (M_PI / 180);
