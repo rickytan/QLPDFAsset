@@ -14,8 +14,6 @@
 		9C18C0A0236D620E0079E068 /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C18C09F236D620E0079E068 /* GenerateThumbnailForURL.m */; };
 		9C18C0A2236D67650079E068 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C18C0A1236D67650079E068 /* CoreFoundation.framework */; };
 		9C18C0A8236D67760079E068 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C18C0A7236D67760079E068 /* CoreServices.framework */; };
-		9C18C0E0236D86700079E068 /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C18C0DE236D866F0079E068 /* tile.png */; };
-		9C18C0E1236D86700079E068 /* tile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C18C0DF236D866F0079E068 /* tile@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +27,6 @@
 		9C18C0A1236D67650079E068 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		9C18C0A7236D67760079E068 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		9C18C0C8236D746F0079E068 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
-		9C18C0DE236D866F0079E068 /* tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile.png; sourceTree = "<group>"; };
-		9C18C0DF236D866F0079E068 /* tile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tile@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +62,6 @@
 		9C18C086236D60660079E068 /* QLPDFAsset */ = {
 			isa = PBXGroup;
 			children = (
-				9C18C0DE236D866F0079E068 /* tile.png */,
-				9C18C0DF236D866F0079E068 /* tile@2x.png */,
 				9C18C09D236D62030079E068 /* GeneratePreviewForURL.m */,
 				9C18C09F236D620E0079E068 /* GenerateThumbnailForURL.m */,
 				9C18C090236D60660079E068 /* Info.plist */,
@@ -156,8 +150,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C18C0E1236D86700079E068 /* tile@2x.png in Resources */,
-				9C18C0E0236D86700079E068 /* tile.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +287,7 @@
 				DEVELOPMENT_TEAM = 36X754M3QH;
 				INFOPLIST_FILE = QLPDFAsset/Info.plist;
 				INSTALL_PATH = "~/Library/QuickLook";
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.rickytan.QLPDFAsset;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = qlgenerator;
@@ -309,6 +302,7 @@
 				DEVELOPMENT_TEAM = 36X754M3QH;
 				INFOPLIST_FILE = QLPDFAsset/Info.plist;
 				INSTALL_PATH = "~/Library/QuickLook";
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.rickytan.QLPDFAsset;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = qlgenerator;

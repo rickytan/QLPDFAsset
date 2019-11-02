@@ -7,15 +7,15 @@
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>applicatoin/pdf</string>
+			</array>
 			<key>CFBundleTypeRole</key>
 			<string>QLGenerator</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>com.adobe.pdf</string>
-			</array>
-			<key>CFBundleTypeMIMETypes</key>
-			<array>
-				<string>applicatoin/pdf</string>
 			</array>
 		</dict>
 	</array>
@@ -30,7 +30,7 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>CFPlugInDynamicRegisterFunction</key>
@@ -58,9 +58,9 @@
 	<key>QLPreviewWidth</key>
 	<integer>640</integer>
 	<key>QLSupportsConcurrentRequests</key>
-	<true/>
+	<false/>
 	<key>QLThumbnailMinimumSize</key>
-	<real>8</real>
+	<integer>17</integer>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>

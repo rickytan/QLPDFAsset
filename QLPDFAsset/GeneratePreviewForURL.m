@@ -29,7 +29,8 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
     
     CGPDFDocumentRef document = CGPDFDocumentCreateWithURL(url);
     size_t pageCount = CGPDFDocumentGetNumberOfPages(document);
-    if (pageCount == 0) {
+    // 多于一页不处理
+    if (pageCount == 0 || pageCount > 1) {
         QLPreviewRequestSetURLRepresentation(preview, url, contentTypeUTI, nil);
         if (document) {
             CGPDFDocumentRelease(document);
@@ -61,18 +62,12 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
     
     CGContextRef context = QLPreviewRequestCreateContext(preview, thumbSize, YES, props);
     if (context) {
-        NSImage *image = [[NSImage alloc] initWithContentsOfURL:[[NSBundle bundleForClass:[QLPDFAsset class]] URLForImageResource:@"tile"]];
-        CGImageRef imageRef = [image CGImageForProposedRect:NULL
-                                                    context:nil
-                                                      hints:nil];
-        CGContextDrawTiledImage(context, CGRectMake(0, 0, CGImageGetWidth(imageRef), CGImageGetHeight(imageRef)), imageRef);
-        CGImageRelease(imageRef);
         
         const NSInteger rotationAngle = CGPDFPageGetRotationAngle(pdfPageRef);
         const CGFloat angleInRadians = -rotationAngle * (M_PI / 180);
         CGAffineTransform transform = CGAffineTransformMakeRotation(angleInRadians);
         CGRect rotatedCropRect = CGRectApplyAffineTransform(cropBox, transform);
-        CGFloat scale = thumbSize.height / CGRectGetHeight(rotatedCropRect);
+        CGFloat scale = MIN(thumbSize.height / CGRectGetHeight(rotatedCropRect), thumbSize.width / CGRectGetWidth(rotatedCropRect));
         transform = CGPDFPageGetDrawingTransform(pdfPageRef, kCGPDFCropBox, CGRectMake(0, 0, thumbSize.width, thumbSize.height), 0, true);
         if (scale > 1)
         {
