@@ -16,7 +16,6 @@
 
 OSStatus GenerateThumbnailForURL(void *thisInterface, QLThumbnailRequestRef thumbnail, CFURLRef url, CFStringRef contentTypeUTI, CFDictionaryRef options, CGSize maxSize)
 {
-    
     QLThumbnailRequestSetThumbnailWithURLRepresentation(thumbnail, url, contentTypeUTI, nil, nil);
     return noErr;
 }
