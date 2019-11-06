@@ -6,5 +6,5 @@ Make a better Preview for **PDF** icons!
 ## Install
 Drag & drop [QLPDFAsset.qlgenerator](https://github.com/rickytan/QLPDFAsset/releases/latest) to your `~/Library/QuickLook` (Create one if not exits!), and run command:
 ```shell
-qlmanager -r
+qlmanage -r
 ```
